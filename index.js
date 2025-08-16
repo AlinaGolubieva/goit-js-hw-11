@@ -5,19 +5,19 @@ import{a as m,S as g,i as o}from"./assets/vendor-ChKhXQjG.js";(function(){const 
   </a>
   <div class="info">
     <div class="info-item">
-      <span class="title">Likes👍</span>
+      <span class="title">Likes</span>
       <span class="value">${t}</span>
     </div>
     <div class="info-item">
-      <span class="title">Views👀</span>
+      <span class="title">Views</span>
       <span class="value">${n}</span>
     </div>
     <div class="info-item">
-      <span class="title">Comments💬</span>
+      <span class="title">Comments</span>
       <span class="value">${d}</span>
     </div>
     <div class="info-item">
-      <span class="title">Downloads⬇️</span>
+      <span class="title">Downloads⬇</span>
       <span class="value">${f}</span>
     </div>
   </div>
