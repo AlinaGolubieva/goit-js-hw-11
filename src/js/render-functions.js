@@ -25,19 +25,19 @@ export function createGallery(images) {
   </a>
   <div class="info">
     <div class="info-item">
-      <span class="title">Likes👍</span>
+      <span class="title">Likes</span>
       <span class="value">${likes}</span>
     </div>
     <div class="info-item">
-      <span class="title">Views👀</span>
+      <span class="title">Views</span>
       <span class="value">${views}</span>
     </div>
     <div class="info-item">
-      <span class="title">Comments💬</span>
+      <span class="title">Comments</span>
       <span class="value">${comments}</span>
     </div>
     <div class="info-item">
-      <span class="title">Downloads⬇️</span>
+      <span class="title">Downloads⬇</span>
       <span class="value">${downloads}</span>
     </div>
   </div>
