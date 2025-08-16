@@ -1,14 +1,19 @@
 import iziToast from 'izitoast';
 import 'izitoast/dist/css/iziToast.min.css';
 import { getImagesByQuery } from './js/pixabay-api';
-import { createGallery } from './js/render-functions';
+import {
+  createGallery,
+  gallery,
+  clearGallery,
+  showLoader,
+  hideLoader,
+} from './js/render-functions';
 
 const form = document.querySelector('form');
 const input = form.querySelector('input[name="search-text"]');
-import { gallery } from './js/render-functions';
 
 form.addEventListener('submit', function (event) {
-  event.preventDefault(); // зупиняємо перезавантаження сторінки
+  event.preventDefault();
   const enteredText = input.value.trim();
 
   if (enteredText === '') {
@@ -21,10 +26,13 @@ form.addEventListener('submit', function (event) {
     return;
   }
 
-  gallery.innerHTML = '';
+  clearGallery();
+
+  showLoader();
 
   getImagesByQuery(enteredText)
     .then(data => {
+      hideLoader();
       if (data.hits.length === 0) {
         iziToast.info({
           title: 'Info',
@@ -35,12 +43,11 @@ form.addEventListener('submit', function (event) {
         return;
       }
 
-      console.log('Знайдені картинки:', data.hits);
-
       createGallery(data.hits);
     })
 
     .catch(error => {
+      hideLoader();
       iziToast.error({
         title: 'Error',
         message: 'Something went wrong. Please try again later.',

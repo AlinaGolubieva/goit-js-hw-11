@@ -32,3 +32,11 @@ img {
   max-width: 100%;
   height: auto;
 }
+
+input,
+button {
+  font-family: inherit;
+  font-size: inherit;
+  line-height: inherit;
+  box-sizing: border-box;
+}
